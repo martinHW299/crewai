@@ -1,0 +1,259 @@
+document_analysis_task:
+  description: >
+    Process ALL documents in the specified Google Drive folder to extract comprehensive project 
+    information for systematic requirements analysis. Your mission is to ensure that every page 
+    of every document is processed completely, leaving no content unanalyzed.
+    
+    CRITICAL REQUIREMENTS:
+    1. Use the Google Drive Comprehensive File Processor tool with folder_id: {folder_id}
+    2. Process ALL file types: PDFs, Google Docs, Word docs, Excel spreadsheets, PowerPoint presentations, text files, etc.
+    3. Extract COMPLETE content from every page and section of each document
+    4. Process subfolders recursively to ensure no documents are missed
+    5. Organize findings systematically by the 15 requirements categories
+    
+    STEP-BY-STEP PROCESS:
+    1. Access the Google Drive folder using the provided folder_id
+    2. Scan for all files and subfolders recursively
+    3. Process each file completely, extracting all text content
+    4. Organize extracted information by these 15 categories:
+       - Business Context & Objectives
+       - Stakeholders & Governance  
+       - Target Users & Personas
+       - Core Use-Cases & User Journeys
+       - Functional Requirements
+       - Non-Functional Requirements
+       - Data Requirements
+       - Integration & Ecosystem Fit
+       - Technical Constraints & Preferences
+       - Regulatory & Compliance Landscape
+       - Budget & Commercial Parameters
+       - Timeline & Milestones
+       - Acceptance & Quality Criteria
+       - Post-Launch Support & Evolution
+       - Risks, Assumptions & Open Issues
+    5. Cross-reference information across documents
+    6. Note specific facts, numbers, dates, names, and decisions
+    7. Identify information gaps where requirements questions cannot be answered
+    
+    INFORMATION TO EXTRACT (be thorough):
+    - Company goals, strategic objectives, ROI targets, success metrics, KPIs
+    - Project sponsors, decision makers, stakeholders, approval processes
+    - User demographics, personas, needs, technical proficiency, accessibility requirements
+    - User workflows, journeys, use cases, system interactions, critical paths
+    - Feature lists, CRUD operations, integrations, notifications, reporting capabilities
+    - Performance requirements, scalability needs, security standards, reliability targets
+    - Data entities, volumes, retention policies, validation rules, synchronization needs
+    - Existing systems, APIs, data formats, integration patterns, processing constraints
+    - Technology stack preferences, platform support, browser requirements, standards
+    - Regulatory compliance needs, data residency, audit requirements, certifications
+    - Budget allocations, CapEx/OpEx splits, licensing costs, payment milestones
+    - Project timelines, deadlines, dependencies, blackout periods, critical paths
+    - Definition of done, UAT processes, performance benchmarks, quality standards
+    - Warranty periods, SLA requirements, maintenance responsibilities, knowledge transfer
+    - Project risks, technical unknowns, assumptions, external dependencies
+    
+    QUALITY STANDARDS:
+    - Process documents completely - do not stop at partial content
+    - Extract factual information with specific details and numbers
+    - Include source document names for all extracted information
+    - Identify relationships and dependencies between information across documents
+    - Note any processing failures or inaccessible content
+    - Ensure no important project information is missed or overlooked
+
+  expected_output: >
+    Comprehensive extraction and organization of ALL project information from Google Drive 
+    documents, formatted as:
+    
+    # COMPREHENSIVE DOCUMENT ANALYSIS RESULTS
+    
+    ## PROCESSING SUMMARY
+    - Total files found: [number]
+    - Successfully processed: [number]  
+    - Processing failures: [number] (with specific reasons)
+    - Total content analyzed: [character count]
+    - File types processed: [list of types]
+    - Subfolders processed: [list if any]
+    
+    ## EXTRACTED INFORMATION BY REQUIREMENTS CATEGORY
+    
+    ### 1. Business Context & Objectives
+    **Information Found:**
+    - [Specific fact/detail with numbers/dates] (Source: [document name])
+    - [Strategic objective or goal] (Source: [document name])
+    - [ROI target or success metric] (Source: [document name])
+    
+    **Information Gaps Identified:**
+    - [Specific missing information needed for requirements analysis]
+    - [Questions that cannot be answered with current documents]
+    
+    ### 2. Stakeholders & Governance
+    **Information Found:**
+    - [Decision maker names and roles] (Source: [document name])
+    - [Approval processes described] (Source: [document name])
+    
+    **Information Gaps Identified:**
+    - [Missing stakeholder information]
+    
+    [Continue systematically for all 15 categories]
+    
+    ## CROSS-DOCUMENT INSIGHTS
+    - [Relationships and dependencies identified across multiple documents]
+    - [Conflicting information that needs clarification]
+    - [Patterns and themes across project documentation]
+    
+    ## DETAILED DOCUMENT INVENTORY
+    - [Document 1]: [Type] - [Pages/Size] - [Processing Status] - [Key Information Categories Found]
+    - [Document 2]: [Type] - [Pages/Size] - [Processing Status] - [Key Information Categories Found]
+    [... for all processed documents]
+    
+    This comprehensive extraction will enable systematic requirements analysis and questionnaire answering.
+
+  agent: document_analyzer
+
+requirements_synthesis_task:
+  description: >
+    Create a comprehensive requirements analysis report by systematically evaluating the extracted 
+    project documentation against the complete requirements questionnaire framework. This analysis 
+    must address each of the 15 requirements categories thoroughly and provide actionable insights 
+    for stakeholders.
+    
+    Use the comprehensive questionnaire framework with questions across these categories:
+    1. Business Context & Objectives
+    2. Stakeholders & Governance
+    3. Target Users & Personas
+    4. Core Use-Cases & User Journeys
+    5. Functional Requirements
+    6. Non-Functional Requirements
+    7. Data Requirements
+    8. Integration & Ecosystem Fit
+    9. Technical Constraints & Preferences
+    10. Regulatory & Compliance Landscape
+    11. Budget & Commercial Parameters
+    12. Timeline & Milestones
+    13. Acceptance & Quality Criteria
+    14. Post-Launch Support & Evolution
+    15. Risks, Assumptions & Open Issues
+    
+    SYSTEMATIC ANALYSIS APPROACH:
+    For each category, systematically evaluate:
+    - What specific information is available from the project documents
+    - Which requirements questions can be answered with current information
+    - What critical information is missing or unclear
+    - What assumptions are being made based on available information
+    - What risks exist from incomplete or missing information
+    - What specific questions stakeholders need to answer
+    - What decisions are required before proceeding
+    
+    COMPREHENSIVE QUESTIONNAIRE EVALUATION:
+    Address key questions from each category, such as:
+    
+    Business Context & Objectives:
+    - What is the primary business problem this application aims to solve?
+    - How does this project align with strategic objectives?
+    - What are the expected ROI and timeline?
+    - What are the top 3-5 KPIs for success?
+    - What competitive advantages are expected?
+    
+    Stakeholders & Governance:
+    - Who is the primary project sponsor with decision-making authority?
+    - What is the complete stakeholder map with roles?
+    - What approval gates are required between project phases?
+    - What is the escalation path for decisions?
+    
+    [Continue through all categories with key questions]
+    
+    CRITICAL SUCCESS FACTORS:
+    - Address every major category of requirements systematically
+    - Provide specific answers based on documented information
+    - Clearly identify gaps that need stakeholder input
+    - Prioritize missing information by criticality
+    - Offer concrete next steps and recommendations
+    - Ensure the analysis is actionable and decision-ready
+    
+  expected_output: >
+    A comprehensive, professional requirements analysis report in markdown format with:
+    
+    # COMPREHENSIVE REQUIREMENTS ANALYSIS REPORT
+    
+    ## EXECUTIVE SUMMARY
+    - Overall requirements completeness assessment
+    - Key findings and critical insights
+    - Most important gaps requiring immediate attention
+    - Recommended priority actions for stakeholders
+    - Risk assessment summary
+    
+    ## SYSTEMATIC REQUIREMENTS ANALYSIS
+    
+    ### 1. Business Context & Objectives
+    **Current Understanding:**
+    - [Specific business goals and objectives found] (Source: [document])
+    - [ROI expectations and success metrics] (Source: [document])
+    - [Strategic alignment information] (Source: [document])
+    
+    **Information Gaps:**
+    - [Critical missing business information]
+    - [Unclear objectives that need clarification]
+    
+    **Key Questions for Stakeholders:**
+    - [Specific questions that need answers]
+    - [Decisions that need to be made]
+    
+    **Risk Assessment:**
+    - [Risks from proceeding with incomplete information]
+    
+    [Continue systematically for all 15 categories]
+    
+    ## OVERALL GAP ANALYSIS
+    **Critical Gaps (Must address before proceeding):**
+    - [Gap 1 with impact assessment]
+    - [Gap 2 with impact assessment]
+    
+    **High Priority Gaps (Should address soon):**
+    - [Gap 1 with recommended timeline]
+    
+    **Medium Priority Gaps (Can be addressed later):**
+    - [Less critical gaps for future phases]
+    
+    ## RISK ASSESSMENT
+    **Technical Risks:**
+    - [Risks from incomplete technical information]
+    
+    **Business Risks:**
+    - [Risks from unclear business requirements]
+    
+    **Project Risks:**
+    - [Timeline and budget risks from gaps]
+    
+    ## RECOMMENDED NEXT STEPS
+    **Immediate Actions (Next 1-2 weeks):**
+    1. [Specific stakeholder meetings needed]
+    2. [Critical decisions that must be made]
+    3. [Essential information that must be gathered]
+    
+    **Short-term Actions (Next month):**
+    1. [Medium priority clarifications]
+    2. [Additional documentation needed]
+    
+    **Ongoing Actions:**
+    1. [Continuous requirements refinement]
+    2. [Regular stakeholder check-ins]
+    
+    ## STAKEHOLDER ENGAGEMENT PLAN
+    **Key Stakeholders to Engage:**
+    - [Stakeholder name/role]: [Specific topics to discuss]
+    - [Stakeholder name/role]: [Decisions needed from them]
+    
+    **Recommended Meeting Schedule:**
+    - [Timeline for stakeholder engagements]
+    
+    ## APPENDIX
+    **Document Processing Summary:**
+    - [Detailed breakdown of what was found in each document]
+    
+    **Detailed Gap Analysis:**
+    - [Comprehensive list of all identified gaps organized by category]
+    
+    The report must be professional, actionable, and immediately useful for stakeholder 
+    decision-making and project planning.
+
+  agent: requirements_synthesizer

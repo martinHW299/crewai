@@ -1,0 +1,29 @@
+[project]
+name = "requirements_taker_crew"
+version = "0.1.0"
+description = "requirements_taker_crew using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.140.0,<1.0.0",
+    "docx>=0.2.4",
+    "google-api-python-client>=2.175.0",
+    "google-auth-oauthlib>=1.2.2",
+    "pypdf2>=3.0.1",
+    "python-docx>=1.2.0",
+    "python-pptx>=1.0.2",
+]
+
+[project.scripts]
+requirements_taker_crew = "requirements_taker_crew.main:run"
+run_crew = "requirements_taker_crew.main:run"
+train = "requirements_taker_crew.main:train"
+replay = "requirements_taker_crew.main:replay"
+test = "requirements_taker_crew.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
